@@ -1,53 +1,68 @@
-<?php 
+<?php
 
 namespace Controllers;
 
-class LoginController {
-    public static function login (){
-        echo "desde login";
+use MVC\Router;
 
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            
+class LoginController
+{
+    public static function login(Router $router)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
+        //render a la vista
+        $router->render('auth/login', [
+            'titulo' => 'Iniciar sesión',
+        ]);
     }
-    public static function logout (){
-        echo "desde login";
-
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
+    public static function logout(Router $router)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
+        //render a la vista
+        $router->render('auth/logout', [
+            'titulo' => 'Iniciar sesión',
+        ]);
     }
 
-    public static function crear(){
-        echo "desde crear";
-
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        } 
+    public static function crear(Router $router)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        }
+        //render a la vista
+        $router->render('auth/crear', [
+            'titulo' => 'Iniciar sesión',
+        ]);
     }
 
-    public static function olvide(){
+    public static function olvide(Router $router)
+    {
         echo "desde olvide";
 
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        } 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        }
+        //render a la vista
+        $router->render('', [
+            'titulo' => 'Iniciar sesión',
+        ]);
     }
-    public static function reestablecer(){
+    public static function reestablecer(Router $router)
+    {
         echo "desde reestablecer";
 
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        } 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        }
+        //render a la vista
+        $router->render('', [
+            'titulo' => 'Iniciar sesión',
+        ]);
     }
-    public static function mensaje(){
+    public static function mensaje()
+    {
         echo "desde mensaje";
-
-
     }
-    public static function confirmar(){
+    public static function confirmar()
+    {
         echo "desde confirmar";
-
-
     }
 }
